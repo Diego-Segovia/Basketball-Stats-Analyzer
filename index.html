@@ -26,53 +26,107 @@
     <!-- Project Script-->
     <script src="script.js" defer></script>
     <title>Basketball Analyzer</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
   </head>
   <body>
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-1">
       <div class="row">
         <div class="col-lg-3">
           <div class="card mb-2 shadow">
             <div class="card-body">
-              <h5 class="card-title text-center">Analyze Your Favorite Basketball Players</h5>
-              <p class="card-text text-center">Choose your basketball stats, the season and the player.</p>
-               <form id="form-stats">
+              <h5 class="card-title text-center">
+                Analyze Your Favorite Basketball Players
+              </h5>
+              <p class="card-text text-center">
+                Choose your basketball stats, the season and the player.
+              </p>
+              <form id="form-stats">
                 <div class="list-group mb-3">
-                  <li class="list-group-item text-white bg-dark" aria-current="true">Stats Types</li>
+                  <li
+                    class="list-group-item text-white bg-dark"
+                    aria-current="true"
+                  >
+                    Stats Types
+                  </li>
                   <label class="list-group-item">
-                    <input id="stats1" class="form-check-input me-1" type="checkbox" value="assists">
+                    <input
+                      id="stats1"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="assists"
+                    />
                     Assists
                   </label>
                   <label class="list-group-item">
-                    <input id="stats2" class="form-check-input me-1" type="checkbox" value="blocks">
+                    <input
+                      id="stats2"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="blocks"
+                    />
                     Blocks
                   </label>
                   <label class="list-group-item">
-                    <input id="stats3" class="form-check-input me-1" type="checkbox" value="points">
+                    <input
+                      id="stats3"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="points"
+                    />
                     Points
                   </label>
                   <label class="list-group-item">
-                    <input id="stats4" class="form-check-input me-1" type="checkbox" value="rebounds">
+                    <input
+                      id="stats4"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="rebounds"
+                    />
                     Rebounds
                   </label>
                   <label class="list-group-item">
-                    <input id="stats5" class="form-check-input me-1" type="checkbox" value="turnovers">
+                    <input
+                      id="stats5"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="turnovers"
+                    />
                     Turnovers
                   </label>
                   <label class="list-group-item">
-                    <input id="stats6" class="form-check-input me-1" type="checkbox" value="steals">
+                    <input
+                      id="stats6"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="steals"
+                    />
                     Steals
                   </label>
                   <label class="list-group-item">
-                    <input id="stats7" class="form-check-input me-1" type="checkbox" value="attemptedGoals">
+                    <input
+                      id="stats7"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="attemptedGoals"
+                    />
                     Field Goals Attempted
                   </label>
                   <label class="list-group-item">
-                    <input id="stats8" class="form-check-input me-1" type="checkbox" value="madeGoals">
+                    <input
+                      id="stats8"
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value="madeGoals"
+                    />
                     Field Goals Made
                   </label>
                 </div>
-                <div id="stats-error" class="alert alert-danger p-2 collapse" role="alert">
+                <div
+                  id="stats-error"
+                  class="alert alert-danger p-2 collapse"
+                  role="alert"
+                >
                   At least one stat needed. Please choose one.
                 </div>
                 <select id="select-season" class="form-select mb-3" required>
@@ -81,25 +135,54 @@
                   <option value="2020">2020-2021</option>
                   <option value="2019">2019-2020</option>
                 </select>
-                <div id="season-error" class="alert alert-danger p-2 collapse" role="alert">
+                <div
+                  id="season-error"
+                  class="alert alert-danger p-2 collapse"
+                  role="alert"
+                >
                   No data for season. Please choose another.
                 </div>
                 <div class="input-group mb-3">
-                  <input id="player-name" type="text" class="form-control" placeholder="Player's Name e.g. Lebron James" required>
+                  <input
+                    id="player-name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Player's Name e.g. Lebron James"
+                    required
+                  />
                 </div>
-                <div id="player-error" class="alert alert-danger p-2 collapse" role="alert">
+                <div
+                  id="player-error"
+                  class="alert alert-danger p-2 collapse"
+                  role="alert"
+                >
                   Player Not Found. Try again.
                 </div>
-                <div id="player-name-error" class="alert alert-danger p-2 collapse" role="alert">
+                <div
+                  id="player-name-error"
+                  class="alert alert-danger p-2 collapse"
+                  role="alert"
+                >
                   Please provide first and last name.
                 </div>
                 <div class="row mb-3">
-                  <label for="num-games" class="form-label">Number of Games</label>
+                  <label for="num-games" class="form-label"
+                    >Number of Games</label
+                  >
                   <div class="col-10">
-                    <input id="numGames" name="games-input" value="25" type="range" class="form-range" min="1" max="100" oninput="gamesValue.value = numGames.value">
+                    <input
+                      id="numGames"
+                      name="games-input"
+                      value="25"
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="100"
+                      oninput="gamesValue.value = numGames.value"
+                    />
                   </div>
                   <div class="col">
-                    <output id="gamesValue" name="games-output" >25</output>
+                    <output id="gamesValue" name="games-output">25</output>
                   </div>
                 </div>
                 <select id="select-chart" class="form-select mb-3" required>
@@ -109,15 +192,20 @@
                   <option value="doughnut">Doughnut Chart</option>
                 </select>
                 <div class="d-grid">
-                  <button id="btn-analyze" type="submit" class="btn btn-primary">Analyze</button>
+                  <button
+                    id="btn-analyze"
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    Analyze
+                  </button>
                 </div>
-               </form>
+              </form>
             </div>
           </div>
         </div>
         <div class="col-lg-9">
-            <canvas id="myChart"></canvas>
-          </div>
+          <canvas id="myChart"></canvas>
         </div>
       </div>
     </div>
