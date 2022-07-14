@@ -5,7 +5,7 @@ const FlashCard = () => {
     <Card>
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
-        <Card.Text>Some quick example text.</Card.Text>
+        <Card.Text>Some quick hlwhflhf example text.</Card.Text>
       </Card.Body>
     </Card>
   );

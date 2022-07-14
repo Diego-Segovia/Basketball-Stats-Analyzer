@@ -1,19 +1,11 @@
 import "./App.css";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import ColCard from "./Components/ColCard";
+import BasicEample from "./Components/Form";
 
 function App() {
   return (
     <Container className="mt-5">
-      <Row>
-        <ColCard />
-        <ColCard></ColCard>
-        <ColCard></ColCard>
-        <ColCard></ColCard>
-      </Row>
-      <Button>Push Me</Button>
+      <BasicEample />
     </Container>
   );
 }
